@@ -1,19 +1,16 @@
-# .github/workflows/deploy.yml
-
-name: GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
-    paths:
-      - '.github/workflows/deploy.yml'
-      - 'website/**'
-  pull_request:
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     concurrency:
@@ -27,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Get yarn cache
         id: yarn-cache
