@@ -1,0 +1,45 @@
+{
+  "name": "@orbit/indexeddb",
+  "version": "0.17.2",
+  "description": "IndexedDB support for Orbit.",
+  "contributors": [
+    "Dan Gebhardt <dan@cerebris.com>"
+  ],
+  "keywords": [
+    "orbit",
+    "orbit.js",
+    "indexeddb"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/orbitjs/orbit",
+  "license": "MIT",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/modules/index.js",
+  "sideEffects": false,
+  "types": "dist/modules/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./dist && yarn build:modules && yarn build:commonjs",
+    "build:modules": "tsc --project ./tsconfig.modules.json",
+    "build:commonjs": "tsc --project ./tsconfig.commonjs.json",
+    "compile": "tsc",
+    "clean": "git clean -x -f",
+    "lint": "eslint . --ext .ts",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn clean",
+    "start": "node ../build dev && snowpack dev",
+    "test": "node ../build ci && snowpack build && testem ci"
+  },
+  "dependencies": {
+    "@orbit/core": "^0.17.0",
+    "@orbit/data": "^0.17.0",
+    "@orbit/record-cache": "^0.17.2",
+    "@orbit/records": "^0.17.0",
+    "@orbit/utils": "^0.17.0"
+  },
+  "devDependencies": {
+    "@orbit/build": "^0.17.0"
+  },
+  "prettier": "@orbit/prettier-config"
+}

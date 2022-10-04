@@ -1,0 +1,10 @@
+{
+  "buildOptions": {
+    "out": "tests-build"
+  },
+  "mount": {
+    "tests-static": "/",
+    "src": "/_dist_/src",
+    "test": "/_dist_/test"
+  }
+}
