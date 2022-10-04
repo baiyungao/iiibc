@@ -1,8 +1,0 @@
-node_modules
-*.log
-tmp
-dist
-tests-build
-tests-static
-.cache
-**/test/index.ts
