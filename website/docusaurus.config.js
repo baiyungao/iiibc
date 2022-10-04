@@ -5,8 +5,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Team',
   tagline: 'The formula of a happy team',
-  url: 'https://baiyungao.github.io/iiibc',
-  baseUrl: '/',
+  url: 'https://baiyungao.github.io',
+  baseUrl: '/iiibc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
