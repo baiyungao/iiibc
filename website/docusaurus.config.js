@@ -3,16 +3,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Orbit.js',
-  tagline: 'The Universal Data Layer',
-  url: 'https://orbitjs.com',
+  title: 'Team',
+  tagline: 'The formula of a happy team',
+  url: 'https://baiyungao.github.io/iiibc',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   trailingSlash: false,
-  organizationName: 'orbitjs',
-  projectName: 'orbitjs.com',
+  organizationName: 'baiyungao',
+  projectName: 'iiibc',
   themeConfig: {
     navbar: {
       logo: {
